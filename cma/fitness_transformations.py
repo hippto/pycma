@@ -475,7 +475,7 @@ class ScaleCoordinates(ComposedFunction):
                 warnings.warn("upper={} is ignored because zero={} was given"
                               .format(upper, zero))
 
-    def scale_and_offset(self, x):
+    def scale_and_offset(self, x, *args, **kwargs):
         x = np.asarray(x)
         def r(vec):
             return utils.recycled(vec, as_=x)
